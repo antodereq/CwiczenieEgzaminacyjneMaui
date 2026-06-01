@@ -7,7 +7,66 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
+
+            <Label 
+                Text="Inteligentny Pokój" 
+                HorizontalOptions="Center"
+                FontSize="24"
+            />
+            <Label 
+                Text="Autor: Antoni Ulaczyk"
+                HorizontalOptions="Center"
+                FontSize="16"
+            />
+
+            <!--lampka-->
+            <HorizontalStackLayout>
+                <VerticalStackLayout>
+                    <Label Text="Lampka"/>
+
+                    <Image
+                        Source="lampka.png"
+                        WidthRequest="200"
+                        HeightRequest="200"
+                        Aspect="AspectFit"
+                    />
+                </VerticalStackLayout>
+                <VerticalStackLayout>
+                    <Button Text="Włącz"/>
+
+                    <Label Text="Lampka wyłączona"/>
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+
+            <!--klimatyzacja-->
+            <HorizontalStackLayout>
+                <VerticalStackLayout>
+                    <Label Text="Klimatyzacja"/>
+
+                    <Image
+                        Source="klimatyzacja2.png"
+                        WidthRequest="200"
+                        HeightRequest="200"
+                        Aspect="AspectFit"
+                    />
+                </VerticalStackLayout>
+                <VerticalStackLayout>
+                    <Button Text="Włącz"/>
+
+                    <Label Text="Klimatyzacja wyłączona"/>
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
             
+            <!--temperatura-->
+            <VerticalStackLayout>
+                <Label Text="Temperatura"/>
+                <Entry Placeholder="Podaj temperaturę, np. 16.30"/>
+                <Button Text="Zatwierdź"/>
+                <HorizontalStackLayout>
+                    <Label Text="Ustawiona temperatura: "/>
+                    <Label Text="Nie podano."/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
         </VerticalStackLayout>
     </ScrollView>
 
