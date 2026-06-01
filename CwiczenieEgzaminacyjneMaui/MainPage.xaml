@@ -1,93 +1,225 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CwiczenieEgzaminacyjneMaui.MainPage">
+             x:Class="CwiczenieEgzaminacyjneMaui.MainPage"
+             BackgroundColor="LightBlue">
 
     <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
+        <VerticalStackLayout Padding="25" Spacing="20">
 
-            <Label 
-                Text="Inteligentny Pokój" 
-                HorizontalOptions="Center"
-                FontSize="24"
-            />
-            <Label 
-                Text="Autor: Antoni Ulaczyk"
-                HorizontalOptions="Center"
-                FontSize="16"
-            />
+            <Border 
+                BackgroundColor="SkyBlue"
+                Stroke="RoyalBlue"
+                StrokeThickness="2"
+                StrokeShape="RoundRectangle 18"
+                Padding="20"
+            >
 
-            <!--lampka-->
-            <HorizontalStackLayout>
-                <VerticalStackLayout>
-                    <Label Text="Lampka"/>
-
-                    <Image
-                        Source="lampka.png"
-                        WidthRequest="200"
-                        HeightRequest="200"
-                        Aspect="AspectFit"
-                    />
-                </VerticalStackLayout>
-                <VerticalStackLayout>
-                    <Button 
-                        Text="Włącz" 
-                        x:Name="lampBtn" 
-                        Clicked="lampBtn_Clicked"
+                <VerticalStackLayout Spacing="8">
+                    <Label 
+                        Text="Inteligentny apartament"
+                        HorizontalOptions="Center"
+                        FontSize="28"
+                        FontAttributes="Bold"
+                        TextColor="Navy" 
                     />
 
                     <Label 
-                        Text="Lampka wyłączona" 
-                        x:Name="lampLabel"
+                        Text="Autor: Antoni Ulaczyk"
+                        HorizontalOptions="Center"
+                        FontSize="16"
+                        TextColor="Navy" 
                     />
                 </VerticalStackLayout>
-            </HorizontalStackLayout>
+            </Border>
 
-            <!--klimatyzacja-->
-            <HorizontalStackLayout>
-                <VerticalStackLayout>
-                    <Label Text="Klimatyzacja"/>
+            <!-- lampka -->
+            <Border 
+                BackgroundColor="White"
+                Stroke="RoyalBlue"
+                StrokeThickness="2"
+                StrokeShape="RoundRectangle 18"
+                Padding="18"
+            >
 
-                    <Image
-                        Source="klimatyzacja2.png"
-                        WidthRequest="200"
-                        HeightRequest="200"
-                        Aspect="AspectFit"
-                    />
-                </VerticalStackLayout>
-                <VerticalStackLayout>
-                    <Button 
-                        Text="Włącz"
-                        x:Name="coolerBtn"
-                        Clicked="coolerBtn_Clicked"
-                    />
+                <Grid 
+                    ColumnDefinitions="*,*" 
+                    ColumnSpacing="20"
+                >
+                    <VerticalStackLayout 
+                        Spacing="10" 
+                        HorizontalOptions="Center"
+                    >
+                        <Label 
+                            Text="Lampka"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="Navy"
+                            HorizontalOptions="Center" 
+                        />
 
+                        <Image 
+                            Source="lampka.png"
+                            WidthRequest="170"
+                            HeightRequest="170"
+                            Aspect="AspectFit" 
+                        />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout 
+                        Grid.Column="1"
+                        Spacing="15"
+                        VerticalOptions="Center"
+                    >
+
+                        <Button 
+                            Text="Włącz"
+                            x:Name="lampBtn"
+                            Clicked="lampBtn_Clicked"
+                            BackgroundColor="RoyalBlue"
+                            TextColor="White"
+                            CornerRadius="12"
+                            Padding="18,10"
+                            FontAttributes="Bold" 
+                        />
+
+                        <Label 
+                            Text="Lampka wyłączona"
+                            x:Name="lampLabel"
+                            BackgroundColor="SkyBlue"
+                            TextColor="Navy"
+                            Padding="10,6"
+                            HorizontalTextAlignment="Center"
+                        />
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
+
+            <!-- klimatyzacja -->
+            <Border 
+                BackgroundColor="White"
+                Stroke="RoyalBlue"
+                StrokeThickness="2"
+                StrokeShape="RoundRectangle 18"
+                Padding="18"
+            >
+
+                <Grid 
+                    ColumnDefinitions="*,*" 
+                    ColumnSpacing="20"
+                >
+                    <VerticalStackLayout 
+                        Spacing="10" 
+                        HorizontalOptions="Center"
+                    >
+                        <Label 
+                            Text="Klimatyzacja"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="Navy"
+                            HorizontalOptions="Center" 
+                        />
+
+                        <Image 
+                            Source="klimatyzacja2.png"
+                            WidthRequest="170"
+                            HeightRequest="170"
+                            Aspect="AspectFit" 
+                        />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout 
+                        Grid.Column="1"
+                        Spacing="15"
+                        VerticalOptions="Center"
+                    >
+
+                        <Button 
+                            Text="Włącz"
+                            x:Name="coolerBtn"
+                            Clicked="coolerBtn_Clicked"
+                            BackgroundColor="RoyalBlue"
+                            TextColor="White"
+                            CornerRadius="12"
+                            Padding="18,10"
+                            FontAttributes="Bold" 
+                        />
+
+                        <Label 
+                            Text="Klimatyzacja wyłączona"
+                            x:Name="coolerLabel"
+                            BackgroundColor="SkyBlue"
+                            TextColor="Navy"
+                            Padding="10,6"
+                            HorizontalTextAlignment="Center" 
+                        />
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
+
+            <!-- temperatura -->
+            <Border 
+                BackgroundColor="White"
+                Stroke="RoyalBlue"
+                StrokeThickness="2"
+                StrokeShape="RoundRectangle 18"
+                Padding="18"
+            >
+
+                <VerticalStackLayout Spacing="12">
                     <Label 
-                        Text="Klimatyzacja wyłączona" 
-                        x:Name="coolerLabel"
+                        Text="Temperatura"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="Navy" 
                     />
+
+                    <Entry 
+                        Placeholder="Podaj temperaturę z zakresu 16 - 30 stopni"
+                        x:Name="tempEntry"
+                        Keyboard="Numeric"
+                        BackgroundColor="SkyBlue"
+                        TextColor="Navy"
+                        PlaceholderColor="Navy"
+                        Margin="0,5" 
+                    />
+
+                    <Button 
+                        Text="Zatwierdź"
+                        x:Name="tempBtn"
+                        Clicked="tempBtn_Clicked"
+                        BackgroundColor="RoyalBlue"
+                        TextColor="White"
+                        CornerRadius="12"
+                        Padding="18,10"
+                        FontAttributes="Bold" 
+                    />
+
+                    <Border 
+                        BackgroundColor="SkyBlue"
+                        Stroke="RoyalBlue"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 12"
+                        Padding="10"
+                    >
+
+                        <HorizontalStackLayout HorizontalOptions="Center">
+                            <Label 
+                                Text="Ustawiona temperatura: "
+                                TextColor="Navy"
+                                FontAttributes="Bold"
+                            />
+
+                            <Label 
+                                Text="Nie podano."
+                                x:Name="tempLabel"
+                                TextColor="Navy" 
+                            />
+                        </HorizontalStackLayout>
+                    </Border>
                 </VerticalStackLayout>
-            </HorizontalStackLayout>
-            
-            <!--temperatura-->
-            <VerticalStackLayout>
-                <Label Text="Temperatura"/>
-                <Entry 
-                    Placeholder="Podaj temperaturę z zakresu 16 - 30 stopni"
-                    x:Name="tempEntry"
-                />
-                <Button 
-                    Text="Zatwierdź" 
-                    x:Name="tempBtn" 
-                    Clicked="tempBtn_Clicked"
-                />
-                <HorizontalStackLayout>
-                    <Label Text="Ustawiona temperatura: "/>
-                    <Label Text="Nie podano." x:Name="tempLabel"/>
-                </HorizontalStackLayout>
-            </VerticalStackLayout>
+            </Border>
+
         </VerticalStackLayout>
     </ScrollView>
 
