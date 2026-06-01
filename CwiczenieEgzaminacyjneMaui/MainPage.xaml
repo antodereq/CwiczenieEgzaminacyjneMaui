@@ -32,9 +32,16 @@
                     />
                 </VerticalStackLayout>
                 <VerticalStackLayout>
-                    <Button Text="Włącz"/>
+                    <Button 
+                        Text="Włącz" 
+                        x:Name="lampBtn" 
+                        Clicked="lampBtn_Clicked"
+                    />
 
-                    <Label Text="Lampka wyłączona"/>
+                    <Label 
+                        Text="Lampka wyłączona" 
+                        x:Name="lampLabel"
+                    />
                 </VerticalStackLayout>
             </HorizontalStackLayout>
 
@@ -51,20 +58,34 @@
                     />
                 </VerticalStackLayout>
                 <VerticalStackLayout>
-                    <Button Text="Włącz"/>
+                    <Button 
+                        Text="Włącz"
+                        x:Name="coolerBtn"
+                        Clicked="coolerBtn_Clicked"
+                    />
 
-                    <Label Text="Klimatyzacja wyłączona"/>
+                    <Label 
+                        Text="Klimatyzacja wyłączona" 
+                        x:Name="coolerLabel"
+                    />
                 </VerticalStackLayout>
             </HorizontalStackLayout>
             
             <!--temperatura-->
             <VerticalStackLayout>
                 <Label Text="Temperatura"/>
-                <Entry Placeholder="Podaj temperaturę, np. 16.30"/>
-                <Button Text="Zatwierdź"/>
+                <Entry 
+                    Placeholder="Podaj temperaturę z zakresu 16 - 30 stopni"
+                    x:Name="tempEntry"
+                />
+                <Button 
+                    Text="Zatwierdź" 
+                    x:Name="tempBtn" 
+                    Clicked="tempBtn_Clicked"
+                />
                 <HorizontalStackLayout>
                     <Label Text="Ustawiona temperatura: "/>
-                    <Label Text="Nie podano."/>
+                    <Label Text="Nie podano." x:Name="tempLabel"/>
                 </HorizontalStackLayout>
             </VerticalStackLayout>
         </VerticalStackLayout>
